@@ -179,7 +179,7 @@ function ChatContentForId({ chatId }: { chatId: string }) {
               </select>
             </div>
           </div>
-          <div class="text-sm text-gray-500 w-full">
+          <div class="text-sm text-sky-500 w-full">
             {editingSystemPrompt !== null
               ? (
                 <input
@@ -256,7 +256,7 @@ function ChatContentForId({ chatId }: { chatId: string }) {
             }}
           />
           <button
-            class="bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded"
+            class="bg-orange-400 hover:bg-orange-600 text-white px-4 py-2 rounded"
             onClick={sendInput}
           >
             Send
@@ -314,7 +314,7 @@ function MessageView(
   }, [state.id, initMessage.id, forceCompleted]);
 
   return (
-    <div class="flex flex-col items-start p-2 bg-gray-100 rounded">
+    <div class="flex flex-col items-start p-2 bg-sky-50 rounded">
       <div class="flex flex-row gap-2 text-sm">
         <div class="font-bold">
           {message.role}

@@ -13,6 +13,12 @@ export function SidebarContent() {
   const currentHead = state.currentHead.value;
   return (
     <div class="flex flex-col h-full">
+      <div>
+        <img
+          src="/logo-no.png"
+          alt="logo"
+          class="w-48 mx-auto my-4"></img>
+      </div>
       <div class="p-2 hidden sm:block">
         <NewChat />
       </div>
@@ -21,8 +27,8 @@ export function SidebarContent() {
         {[...state.heads.value.values()].reverse().map((head) => (
           <div
             key={head.id}
-            class={`flex flex-col p-2 border-b border-gray-200 hover:bg-gray-400${
-              head.id === currentHead ? " bg-gray-300" : ""
+            class={`flex flex-col p-2 border-b border-sky-200 hover:bg-sky-400${
+              head.id === currentHead ? " bg-sky-300" : ""
             }`}
             onClick={() => {
               location.hash = `#${head.id}`;
@@ -67,7 +73,7 @@ export function NewChat({ white }: { white?: boolean }) {
   return (
     <button
       class={`flex flex-row ${
-        white ? "bg-white" : "bg-black"
+        white ? "bg-sky-100" : "bg-sky-900"
       } rounded-lg shadow text-${white ? "black" : "white"} py-2 px-4 gap-2`}
       onClick={async () => {
         const head = await fetchOrError<ChatHead>(

@@ -45,13 +45,13 @@ export function ChatUI(
           <NewChat white />
         </div>
         <div
-          class={`sm:w-1/4 bg-gray-200 sm:max-w-xs h-screen ${
+          class={`sm:w-1/4 bg-sky-800 sm:max-w-xs h-screen ${
             isSidebarOpen ? "block" : "hidden"
           } sm:block`}
         >
           <SidebarContent />
         </div>
-        <div class="w-full sm:w-3/4 bg-gray-100 flex-grow h-screen">
+        <div class="w-full sm:w-3/4 bg-emerald-100 flex-grow h-screen">
           <ChatContent />
         </div>
       </div>
